@@ -1,0 +1,363 @@
+<html>
+<title>NavDiary</title>
+<link rel="shortcut icon" href="./images/logo.png"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 22%;
+    position: absolute;
+    top:105px;
+
+   }
+
+tr, td {
+    padding: 8px;
+    text-align: left;
+
+
+}
+tr:hover
+ {
+   background-color:#181d23;
+   width: 32%;
+ }
+
+
+ #faqTable {
+     border-collapse: collapse;
+     width: 22%;
+     position: absolute;
+     top:15px;
+     left:40px;
+    }
+
+ #faqTableTr, #faqTableTd {
+     padding: 8px;
+     text-align: left;
+
+ }
+ #faqTableTr:hover
+  {
+    background-color:white;
+  }
+
+
+
+
+
+body {
+	background-color:#f0f0f1;
+	overflow:hidden;
+}
+#header
+{
+	position:absolute;
+	left:-3px;
+	width:1369px;
+	height:54px;
+	top: -2px;
+  background-color:#4caecc;
+   width:2254px;
+}
+#name {
+ position:absolute;
+ width:269px;
+ height:34px;
+ z-index:3;
+ left: 50px;
+ top: -3px;
+
+}
+
+#name font
+{
+  letter-spacing:4px;
+  color:#dadfe3;
+  font-size:25px;
+  position: absolute;
+  top:15px;
+  left:25px;
+
+}
+#Left-Pannel
+{
+position: absolute;
+background-color:#2e363e;
+top:52px;
+width:340px;
+height:1000px;
+
+
+}
+#template_list
+{
+  cursor: pointer;
+  color: white;
+overflow-wrap: break-word;
+text-overflow: ellipsis;
+
+}
+
+.highlight {
+  background-color:#181d23;
+    font-weight: bold;
+}
+
+
+#Information
+{
+position: absolute;
+left:345px;
+top:83px;
+
+}
+
+.nav-tabs > li {
+    float:none;
+    display: table-cell;
+    width:250px;
+
+}
+#addTemplateButton
+{
+position: absolute;
+left: 294px;
+top:65px;
+cursor: pointer;
+ }
+
+ #templateInputSearch
+ {
+position: absolute;
+top: 8px;
+right:62px;
+}
+
+#addTemplateName
+{
+
+position: absolute;
+bottom:-16px;
+left:-15px;
+width:298px;
+
+}
+
+#edit {
+position: absolute;
+left:93px;
+top:85px;
+
+}
+#saveInfo
+{
+  position: absolute;
+  left:180px;
+  top:86px;
+
+
+}
+#saveTechnical
+{
+  position: absolute;
+  left:180px;
+  top:86px;
+
+
+}
+#saveCustomer
+{
+  position: absolute;
+  left:180px;
+  top:86px;
+
+
+}
+
+#infoContent
+{
+position: absolute;
+top: 120px;
+left:15px;
+width: 900px;
+height:560px;
+font-size: 20px;
+overflow-y: scroll;
+background-color: white;
+
+}
+#comment #answer
+{
+  position: relative;
+  left:50px;
+  word-wrap: break-word;
+ }
+
+ #comment
+ {
+position: relative;
+left:34px;
+
+ }
+
+ #answer
+ {
+   position: relative;
+   right:42px;
+   bottom:33px;
+
+
+ }
+
+
+
+
+
+#technicalContent
+{
+position: absolute;
+top: 120px;
+left:15px;
+width: 900px;
+height:560px;
+font-size: 20px;
+overflow-y: scroll;
+background-color: white;
+
+}
+
+
+#customerContent
+{
+position: absolute;
+top: 120px;
+left:15px;
+width: 900px;
+height:560px;
+font-size: 20px;
+overflow-y: scroll;
+background-color: white;
+
+}
+#postQuestionButton
+{
+  position: absolute;
+  right:338px;
+  top:100px
+
+}
+
+
+#faqContent
+{
+position: absolute;
+top:158px;
+left:15px;
+width: 980px;
+height:700%;
+font-size: 20px;
+overflow-y: auto;
+background-color: white;
+
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+html, body {
+    overflow: hidden;
+    width: 100%; /* restrict the page width to viewport */
+}
+
+#faqTextbox
+{
+position: absolute;
+top:94px;
+width:80%;
+
+
+}
+#time{
+position:relative;
+left:42px;
+bottom:8px;
+font-size: 14px;
+
+}
+#user
+{
+  position: relative;
+  bottom:-10px;
+  right:10px;
+}
+
+</style>
+
+
+<script src="./React/React_View.js"  type="text/jsx">
+</script>
+
+<script src="./React/TabReact.js"  type="text/jsx">
+</script>
+
+<script>
+
+
+
+
+ 	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+  		localStorage.setItem('activeTab', $(e.target).attr('href'));
+ 	});
+ 	var activeTab = localStorage.getItem('activeTab');
+ 	if(activeTab){
+ 		$('#NavTab a[href="' + activeTab + '"]').tab('show');
+ 	}
+
+
+
+</script>
+<body >
+  <div className="col-sm-4" id="header">
+  <div id="name">
+    <img src="./images/logo.png" width="29px" height="29px" style="position:absolute;top:20px;right:253px;"/>
+  <font>NavDiary</font>
+  </div>
+
+  </div>
+
+<!--React render container-->
+  <div id="Main-Container">
+  </div>
+
+  <!--React render container
+    <div id="Tab-Container">
+    </div>
+  -->
+
+
+ </body>
+</html>
